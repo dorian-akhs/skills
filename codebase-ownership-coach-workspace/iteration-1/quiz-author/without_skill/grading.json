@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "The response includes evidence that the coach read repo files before producing output",
+      "passed": true,
+      "evidence": "Agent made 27 tool calls. Q4 references hand-rolled timingSafeEqual and bitwise OR accumulation; Q3 references exact env.ts export pattern; Q7 references ARG placeholder values — all require reading specific files."
+    },
+    {
+      "text": "The first question goes beyond surface-level naming (it asks about responsibilities, flows, or design decisions rather than just 'what is in this directory')",
+      "passed": true,
+      "evidence": "Q1 asks 'what is the exact sequence of operations runStartup() performs, and what happens if any step fails?' — requires deep recall of boot sequence. Good question quality, adapted to author signal."
+    },
+    {
+      "text": "The response ends with exactly one question",
+      "passed": false,
+      "evidence": "Response dumps 10 questions at once ('Q1 — Startup sequence', 'Q2 — Chain ID validation', ..., 'Q10 — Logger redaction'). Violates the single-question-at-a-time principle entirely."
+    },
+    {
+      "text": "The question is phrased as active recall (e.g. 'Where does X live?' or 'What would happen if...') not a yes/no question",
+      "passed": true,
+      "evidence": "All 10 questions are recall/reasoning format. Q2 asks to name both sources and their types; Q4 asks why crypto.timingSafeEqual is unavailable. Strong question quality, wrong format."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  }
+}

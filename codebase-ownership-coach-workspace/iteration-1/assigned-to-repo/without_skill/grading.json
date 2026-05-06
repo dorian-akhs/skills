@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "The response includes evidence that the coach read repo files before producing output (reads package.json, directory structure, or similar)",
+      "passed": true,
+      "evidence": "Agent made 37 tool calls. Response accurately describes AGENTS.md invariants, startup sequence, Docker ARG vs ENV detail — all require reading actual files."
+    },
+    {
+      "text": "The orient section has 10 or fewer bullet points",
+      "passed": false,
+      "evidence": "Response is a 200+ line comprehensive reference document with multiple headers, tables, code blocks, and numbered lists. Nowhere near ≤10 bullets."
+    },
+    {
+      "text": "The response ends with exactly one question (not multiple questions)",
+      "passed": false,
+      "evidence": "Response ends with 'The full planning context is in _bmad-output/planning-artifacts/...' — no question asked at all. The user gets a dump, not a coaching session."
+    },
+    {
+      "text": "The opening question targets architecture or entrypoints (not extension points or blast radius — those come later)",
+      "passed": false,
+      "evidence": "No question was asked. Assertion fails vacuously."
+    },
+    {
+      "text": "The response does NOT provide the answer to its own question immediately after asking it",
+      "passed": true,
+      "evidence": "No question asked, so no self-answering occurs. Vacuously passes."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 3,
+    "total": 5,
+    "pass_rate": 0.4
+  }
+}
