@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "entries": {
+    "handoff": {
+      "source": "github.com/willseltzer/claude-handoff/skills/handoff",
+      "type": "github-subdir",
+      "installed_at": "2026-05-08T12:49:34.060749654+05:45",
+      "repo_url": "https://github.com/willseltzer/claude-handoff.git",
+      "subdir": "skills/handoff",
+      "version": "d9e1413",
+      "tree_hash": "7382f61fde7c0135a748f12c18a75e421ccb3ccb",
+      "file_hashes": {
+        "SKILL.md": "sha256:7fabd74b7366e13e3639f97056c82ed6763b660d7cc4c82db07b45d54b678685"
+      }
+    }
+  }
+}
