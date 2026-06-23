@@ -32,8 +32,7 @@ instructions (e.g. "/commit fix the auth bug description"), weave them in.
 - ADR references, story IDs, ticket numbers, sprint names, epic names, or any
   project-management identifiers — even if they appear in branch names or file
   paths
-- `Co-Authored-By` trailers
-- AI attribution or "Generated with" lines
+- Any git commit trailer or extra author line (~/.claude/CLAUDE.md Git rules)
 - "This commit does X", "I", "we", "now", "currently"
 
 ### 3. Show and wait

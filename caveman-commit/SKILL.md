@@ -28,7 +28,8 @@ Write commit messages terse and exact. Conventional Commits format. No fluff. Wh
 
 **What NEVER goes in:**
 - "This commit does X", "I", "we", "now", "currently" — the diff says what
-- "As requested by..." — use Co-authored-by trailer
+- Git commit trailers or extra author lines (~/.claude/CLAUDE.md Git rules)
+- "As requested by..." / credit lines — omit from the message body
 - "Generated with Claude Code" or any AI attribution
 - Emoji (unless project convention requires)
 - Restating the file name when scope already says it

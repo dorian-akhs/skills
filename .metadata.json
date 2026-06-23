@@ -1,16 +1,15 @@
 {
   "version": 1,
   "entries": {
-    "defuddle": {
-      "source": "github.com/kepano/obsidian-skills/skills/defuddle",
+    "agent-browser": {
+      "source": "github.com/vercel-labs/agent-browser/skills/agent-browser",
       "type": "github-subdir",
-      "installed_at": "2026-05-08T12:51:11.604418169+05:45",
-      "repo_url": "https://github.com/kepano/obsidian-skills.git",
-      "subdir": "skills/defuddle",
-      "version": "ac93987",
-      "tree_hash": "db0b775af7e7d603f59fa2b67bdef615baf1a48f",
+      "installed_at": "2026-06-17T10:25:55.98980747+02:00",
+      "repo_url": "https://github.com/vercel-labs/agent-browser.git",
+      "subdir": "skills/agent-browser",
+      "version": "6323df5",
       "file_hashes": {
-        "SKILL.md": "sha256:10673a4dc70a0a057612d443243ab7a5aa4abdd4a0fadc3f6eec5fd71ad5a971"
+        "SKILL.md": "sha256:00709861067d0cbb634609778b1be0469de6d6cef5293fcd24cbd469faaae42c"
       }
     },
     "handoff": {
@@ -36,6 +35,61 @@
       "file_hashes": {
         "SKILL.md": "sha256:97d1ae0728955c4203922753d5656890e5e4dd371b8306ea11884f9b510f1b85",
         "references/EXAMPLES.md": "sha256:f5ce15a4b74643122396265e8c37c828874a4005794de2aee7030662968768eb"
+      }
+    },
+    "next-best-practices": {
+      "source": "github.com/vercel-labs/next-skills/skills/next-best-practices",
+      "type": "github-subdir",
+      "installed_at": "2026-05-13T13:32:45.575675804+05:45",
+      "repo_url": "https://github.com/vercel-labs/next-skills.git",
+      "subdir": "skills/next-best-practices",
+      "version": "dc1de9c",
+      "tree_hash": "a236d702277c5364cf6f540712a8dddb46e79a46",
+      "file_hashes": {
+        "SKILL.md": "sha256:c78f952d4e98bf3694856dbf70c03a6037d4e258ff3701f2642bfdf108549a25",
+        "async-patterns.md": "sha256:3a5e4a91d8399f0922c4a3b15b3490fbeb7396f976139a92311ea34cfa300584",
+        "bundling.md": "sha256:5496b337073985068c61527e0a89fbf7088faa47b9f92d2dd09a7d070cb48a7c",
+        "data-patterns.md": "sha256:538c8e24cd60eded9825a9461f2c644f5e6e5203d95aa4bf7c9486412bcc7aa1",
+        "debug-tricks.md": "sha256:62617a7cb131a2111f9f033617404fadb3458d56aeb0643f75aa5b2e43abf192",
+        "directives.md": "sha256:60b82ee24a8d43631da59beeec11f46ab25ce83c8000578f2222ecb6b6cadf4d",
+        "error-handling.md": "sha256:30b4e825b625df01d4a7c441591ac46782aab4f913432e96f408153d5fa62098",
+        "file-conventions.md": "sha256:0fed8bd429983c930c95eab3ab0254d4f2c128068fa290d758a057e3467252c3",
+        "font.md": "sha256:cb1f8d43e8fbca39839056b4621724837858bdace13e73bf3faf69abca318a21",
+        "functions.md": "sha256:39a8a418af501d7132d289f4b5dd6cae59d1bfa6fda941d502fc29bb0204e079",
+        "hydration-error.md": "sha256:d4baec07ab818045e284c45dd24422685ac934a38ea325139651f664a94eff57",
+        "image.md": "sha256:231a15ddea67fe0b965762cc89993ca5aaeb0c35c0e67767bd53ca138ec04c05",
+        "metadata.md": "sha256:19b00274877056f222f2284be5ade2479690e79e86af9a0466bc9d209506a95d",
+        "parallel-routes.md": "sha256:d8a1c2546d90af2b37e22a4a56a1978555af0d62a7683e349ce3e3287ab8a4af",
+        "route-handlers.md": "sha256:976a17de8024b3a65063350ae0fb6b9b617293f06358305800c858f58b015680",
+        "rsc-boundaries.md": "sha256:2b50b0310884609efc9f2620fbb81ef83a30a810544e449ff669c55935d5b920",
+        "runtime-selection.md": "sha256:7abb95f9af0f4769e7e9e91aba94a5787ed16e2c4009a140c8577a3a49828060",
+        "scripts.md": "sha256:fff3bc7530d5af472e2825fde69a26218c9e58acba74d60913f403baab4628a3",
+        "self-hosting.md": "sha256:f59e9afa0ff4dcbe20374dff13517ccec3ac6a239ef6d02e0ee8863cf9fc7082",
+        "suspense-boundaries.md": "sha256:63e2e7125b1a1a9d652dd301814ad7140f8ab3ad6726b2b53df76a89d9bc262a"
+      }
+    },
+    "next-cache-components": {
+      "source": "github.com/vercel-labs/next-skills/skills/next-cache-components",
+      "type": "github-subdir",
+      "installed_at": "2026-05-13T13:32:45.592946603+05:45",
+      "repo_url": "https://github.com/vercel-labs/next-skills.git",
+      "subdir": "skills/next-cache-components",
+      "version": "dc1de9c",
+      "tree_hash": "a6f29564b9228af553737bd437c7016fc3dc44e0",
+      "file_hashes": {
+        "SKILL.md": "sha256:92fc6ac94c5cabdcd13c7dc7aabd6a4d04921e6295dfc00dd9888e375fd1ff4c"
+      }
+    },
+    "next-upgrade": {
+      "source": "github.com/vercel-labs/next-skills/skills/next-upgrade",
+      "type": "github-subdir",
+      "installed_at": "2026-06-19T17:04:04.222632496+02:00",
+      "repo_url": "https://github.com/vercel-labs/next-skills.git",
+      "subdir": "skills/next-upgrade",
+      "version": "dc1de9c",
+      "tree_hash": "962598faa417cf3b6c03ec2e5cbe0aa0aeb2c4a9",
+      "file_hashes": {
+        "SKILL.md": "sha256:562f9834d7c55c37498e0787fe431061f4bb766cd1dd6bb52441790593c7e1a8"
       }
     },
     "obsidian-bases": {
@@ -76,6 +130,30 @@
         "references/CALLOUTS.md": "sha256:9912ec2e3f8711f65b8ceb82cc19cbffc5e6f8ccf2ab627e18926c522c383d8b",
         "references/EMBEDS.md": "sha256:cd7e3a7d27e9d8315870182f73e8fc8735143a16cefb6902d3f456624e93c3ee",
         "references/PROPERTIES.md": "sha256:392953b5838c3ab3df135b5a914f100ae7b95e4501b6a2e5c8dc63da3ac7558b"
+      }
+    },
+    "solidity-security": {
+      "source": "https://github.com/wshobson/agents/tree/main/plugins/blockchain-web3/skills/solidity-security",
+      "type": "github-subdir",
+      "installed_at": "2026-05-22T11:39:36.959925218+02:00",
+      "repo_url": "https://github.com/wshobson/agents.git",
+      "subdir": "plugins/blockchain-web3/skills/solidity-security",
+      "version": "4bb47e9",
+      "tree_hash": "e241ab40520d8c6f96f4049d6456d8239bf0c2f7",
+      "file_hashes": {
+        "SKILL.md": "sha256:852744d01dee938e14be3a6c329e357740d8a85ae19746f9f7641db5f3a2a14d"
+      }
+    },
+    "thermo-nuclear-code-quality-review": {
+      "source": "https://github.com/cursor/plugins/blob/3347cbab5b54136f6fba0994c3a01a56f7fb7fca/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md",
+      "type": "github-subdir",
+      "installed_at": "2026-06-01T10:03:27.56196216+02:00",
+      "repo_url": "https://github.com/cursor/plugins.git",
+      "subdir": "cursor-team-kit/skills/thermo-nuclear-code-quality-review",
+      "version": "c8402bc",
+      "tree_hash": "d9c8935dd560b3b6f5941247d04a1843f8c7cc35",
+      "file_hashes": {
+        "SKILL.md": "sha256:7faca08b51b643b2ddd0836f92af15574444024685dcc1e677dbbb39ae8c9e8f"
       }
     }
   }

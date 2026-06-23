@@ -1,0 +1,4 @@
+interface:
+  display_name: "Summarize Vault Transcripts"
+  short_description: "Summarize transcript notes in French."
+  default_prompt: "Use $summarize-vault-transcripts to summarize transcript notes and insert each summary before the transcript."
