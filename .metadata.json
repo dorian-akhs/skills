@@ -12,6 +12,20 @@
         "SKILL.md": "sha256:00709861067d0cbb634609778b1be0469de6d6cef5293fcd24cbd469faaae42c"
       }
     },
+    "alchemy-cli": {
+      "source": "github.com/alchemyplatform/skills/skills/alchemy-cli",
+      "type": "github-subdir",
+      "installed_at": "2026-06-30T19:35:28.765048412+02:00",
+      "repo_url": "https://github.com/alchemyplatform/skills.git",
+      "subdir": "skills/alchemy-cli",
+      "version": "546e264",
+      "tree_hash": "be4ff8fedc02514cdd54b3ea1c402ae9abad7987",
+      "file_hashes": {
+        "LICENSE.txt": "sha256:9e897f4d22bb29c8eb94f21f30eb38bbad9791c1e6b3c59036f5223e4b2d1933",
+        "SKILL.md": "sha256:826af3823822bd09e7686e746a25aedf9527f5a689f0a86488e4946d38cc1286",
+        "agents/openai.yaml": "sha256:ea5b9e90575231b785be3cb027ebef52263fbfe06da05dda43f91dc394759c87"
+      }
+    },
     "handoff": {
       "source": "github.com/willseltzer/claude-handoff/skills/handoff",
       "type": "github-subdir",
@@ -130,6 +144,30 @@
         "references/CALLOUTS.md": "sha256:9912ec2e3f8711f65b8ceb82cc19cbffc5e6f8ccf2ab627e18926c522c383d8b",
         "references/EMBEDS.md": "sha256:cd7e3a7d27e9d8315870182f73e8fc8735143a16cefb6902d3f456624e93c3ee",
         "references/PROPERTIES.md": "sha256:392953b5838c3ab3df135b5a914f100ae7b95e4501b6a2e5c8dc63da3ac7558b"
+      }
+    },
+    "skillshare": {
+      "source": "github.com/runkids/skillshare/skills/skillshare",
+      "type": "github-subdir",
+      "installed_at": "2026-06-23T16:40:50.702060272+02:00",
+      "repo_url": "https://github.com/runkids/skillshare.git",
+      "subdir": "skills/skillshare",
+      "version": "dd7f14c",
+      "tree_hash": "aefeaaaf79e8b92e66cf3baf1f891177533b098e",
+      "file_hashes": {
+        "SKILL.md": "sha256:22a2ee8dfed03a66ceb0341b5a178f3eeb8ea3cb27424347298821cb07b0d1a6",
+        "references/TROUBLESHOOTING.md": "sha256:14855dbd2f20ad7042941959f257c79f768d103e89e55d74d8c3b3d38f9ff5ee",
+        "references/audit.md": "sha256:85a31c32f17f39ce2baa5189a8004c6adec506e5fcf7d20378caa103b015fd5d",
+        "references/backup.md": "sha256:96e2e8d5e2d7cfb8765c2eebb4e6d733b79258de8b3d974fca8972557f7326a6",
+        "references/extras.md": "sha256:c133ccb6a2da342fbf05919c27855cb1de124042f8654396e50ee82a2b7e40e1",
+        "references/init.md": "sha256:41d99a2a49f576e1a2354312856ccf730f8d19d4c8d35c592585d40bc2d14d82",
+        "references/install.md": "sha256:2b444bfcd211fae59421631ecd49331b4de287c311354f8ed3ca19f204d223db",
+        "references/log.md": "sha256:406e85525f53f4deaa0f48bf8b3b53db3e032b99f5a0e926c84542d51b3a3625",
+        "references/status.md": "sha256:0143c8250ecbedfa14607b82cbfb23107294b6c1e053b5726629556b7a47412c",
+        "references/sync.md": "sha256:75577dce829fda6050b3b761915b70d9aef0d6bdb3c010d2fef7b7b22e226a8e",
+        "references/targets.md": "sha256:130b0b07b17a88d4bc09af0262a6b161421946f5442295dc5bc828f95226763e",
+        "references/trash.md": "sha256:fb94aa6b71d469fa8f6b5e728fcab531b6eb010a2092389b02eaaadf3ebc98cf",
+        "scripts/run.sh": "sha256:e434ebdb7d3ae0b37c00ddc36687bc975da9e766b8cb863f9aed9a624ebbdfa9"
       }
     },
     "solidity-security": {
