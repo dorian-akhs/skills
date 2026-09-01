@@ -1,40 +1,16 @@
 ---
 name: handoff
-description: Manages context transfer between AI coding sessions. Activates when HANDOFF.md exists, when user mentions handoff/resume, or when ending significant work.
+description: Compact the current conversation into a handoff document for another agent to pick up.
+argument-hint: "What will the next session be used for?"
+disable-model-invocation: true
 ---
 
-# Handoff Detection
+Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS - not the current workspace.
 
-## On Session Start
+Include a "suggested skills" section in the document, which suggests skills that the agent should invoke.
 
-Check if `HANDOFF.md` exists in the working directory. If found:
+Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead.
 
-1. Read it silently
-2. Tell the user: "Found a handoff from a previous session: [title]. [1-sentence goal]. Resume from here?"
-3. If they agree, follow `/handoff:resume` flow
+Redact any sensitive information, such as API keys, passwords, or personally identifiable information.
 
-## Trigger Words
-
-Activate when user says: "handoff", "hand off", "pass this to", "continue later", "pick up where", "transfer context", "save state", "resume", "take over"
-
-## Creating vs Resuming
-
-- User wants to **create**: They're wrapping up or switching agents → use `/handoff:create`
-- User wants to **resume**: They're starting fresh with existing handoff → use `/handoff:resume`
-
-## Proactive Suggestions
-
-Consider suggesting a handoff when:
-- User says "I need to go" or "let's stop here"
-- A significant milestone is reached
-- You've been working for a long time with lots of context
-
-Say: "Want me to create a handoff so you (or another agent) can continue later?"
-
-## Commands
-
-| Command | Use When |
-|---------|----------|
-| `/handoff:create` | Full handoff with all context |
-| `/handoff:quick` | Minimal handoff, just essentials |
-| `/handoff:resume` | Continue from existing handoff |
+If the user passed arguments, treat them as a description of what the next session will focus on and tailor the doc accordingly.

@@ -45,8 +45,8 @@ yet. Example:
 > ```
 > feat(auth): validate token expiry on refresh
 >
-> Expiry check used `<` instead of `<=`, allowing tokens exactly
-> at the boundary to slip through.
+> - Treat tokens at the expiry boundary as invalid.
+> - Use `<=` so boundary tokens cannot pass validation.
 > ```
 >
 > Confirm to commit ("ok", "go", "agreed", "commit", "yes", "do it", "lgtm",
@@ -79,11 +79,16 @@ No `--no-verify`. No force flags. If the hook fails, report the error and stop.
 - ≤50 chars preferred, hard cap 72
 - No trailing period
 
-**Body (only when needed):**
-- Only for: non-obvious *why*, breaking changes, migration notes, issue refs
-- Skip entirely when subject is self-explanatory
-- Wrap at 72 chars, bullets with `-`
+**Body (required unless the change is genuinely simple and straightforward):**
+- Summarize the meaningful implementation details and, where useful, the
+  motivation or impact.
+- Omit it only when the subject fully captures a trivial, self-contained
+  change.
+- Use a `-`-prefixed bullet list, with one detail per bullet.
+- Wrap every body line, including the bullet prefix, at 100 characters or
+  fewer.
 - Issue refs at end: `Closes #42`, `Refs #17`
 
 **Always include a body for:** breaking changes, security fixes, data
-migrations, reverts — future debuggers need the context.
+migrations, reverts, and any change with non-trivial implementation details —
+future debuggers need the context.
