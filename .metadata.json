@@ -111,6 +111,22 @@
         "agents/openai.yaml": "sha256:f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b"
       }
     },
+    "explain-diff-html": {
+      "source": "/tmp/explain-diff-gist.wocPOn/package/explain-diff-html",
+      "type": "local",
+      "installed_at": "2026-09-15T15:18:09.070351754+02:00",
+      "file_hashes": {
+        "SKILL.md": "sha256:5bafcb8a6550b5a147dee443d0cbfc6c1c409b4775510730da752864441d26f7"
+      }
+    },
+    "explain-diff-notion": {
+      "source": "/tmp/explain-diff-gist.wocPOn/package/explain-diff-notion",
+      "type": "local",
+      "installed_at": "2026-09-15T15:18:15.623047325+02:00",
+      "file_hashes": {
+        "SKILL.md": "sha256:29bb5ee1e20236b506dbcea6d61c6ca35dad23d5223652c4606df0bd6f0b655b"
+      }
+    },
     "git-guardrails-claude-code": {
       "source": "https://github.com/mattpocock/skills.git/skills/misc/git-guardrails-claude-code",
       "type": "github-subdir",
@@ -241,6 +257,19 @@
       "file_hashes": {
         "SKILL.md": "sha256:de4da4c11d924fac79c924b2ee3d2db4a5cb98386eb490a599119463d036ae72",
         "agents/openai.yaml": "sha256:395c2db852e66a199f1cd07f7ed92d66cb6f0787460c5475926f1a5e778b699d"
+      }
+    },
+    "multica-cli": {
+      "source": "https://github.com/multica-ai/multica-cli/tree/main/skills/multica-cli",
+      "type": "github-subdir",
+      "installed_at": "2026-09-14T13:39:12.550586801+02:00",
+      "repo_url": "https://github.com/multica-ai/multica-cli.git",
+      "subdir": "skills/multica-cli",
+      "version": "f391633",
+      "tree_hash": "dfe4c6350874a18e6a90f50d7b6a33fd65e943d9",
+      "file_hashes": {
+        "SKILL.md": "sha256:13ceb75377546bc625be96ae9ae8c10a1b38768d726b0e631172388c58ea939d",
+        "agents/openai.yaml": "sha256:88de99a521dbfbe99868aa4f18044c02760107c90c1f5091fffea2c0eda0788b"
       }
     },
     "next-best-practices": {
