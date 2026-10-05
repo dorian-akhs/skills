@@ -3,7 +3,7 @@ name: skillshare
 description: |
   Manages and syncs AI CLI skills and agents across 50+ tools from a single source.
   Use this skill whenever the user mentions "skillshare", runs skillshare commands,
-  manages skills or agents (install, update, uninstall, sync, commit, audit, analyze, check, diff, search),
+  manages skills or agents (create, edit, rename, install, update, uninstall, sync, commit, audit, analyze, check, diff, search),
   or troubleshoots skill/agent configuration (orphaned symlinks, broken targets, sync
   issues). Covers both global (~/.config/skillshare/) and project (.skillshare/)
   modes. Also use when: adding new AI tool targets (Claude, Cursor, Windsurf, etc.),
@@ -208,6 +208,7 @@ See [TROUBLESHOOTING.md](references/TROUBLESHOOTING.md) for more.
 4. **Uninstall safely** — moves to trash (7 days). `trash restore <name>` to undo. **NEVER** `rm -rf` symlinks.
 5. **Output** — `--json` for structured data (12 commands support it, see Quick Lookup). `--no-tui` for plain text on TUI commands (`list`, `log`, `audit`, `analyze`, `diff`, `trash list`, `backup list`, `target list`). `tui off` disables TUI globally. `--dry-run` to preview.
 6. **Node extensions in Claude Code** — `NODE_OPTIONS` is preloaded by the Claude Code harness and causes node to crash when running extensions. Always use `run: ["env", "-u", "NODE_OPTIONS", "node", "convert.js"]` in `extension.yaml` when writing extensions that use Node.js.
+7. **Automatically sync and push skill changes** — The user's standing preference is to complete every creation, edit, rename, installation, update, or removal in the global skillshare source with validation, sync to configured targets, and commit/push to the configured remote. Do this without waiting for a separate push request or routine confirmation. Only defer if the user explicitly requests local-only work or a real blocker prevents completion. See [sync.md](references/sync.md#automatic-completion-after-skill-changes) for the completion and conflict workflow.
 
 ## References
 | Topic | File |

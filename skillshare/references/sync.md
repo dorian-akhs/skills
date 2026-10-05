@@ -88,6 +88,16 @@ skillshare push --dry-run      # Preview
 
 **Project mode:** Use `git push` directly on the project repo.
 
+### Automatic completion after skill changes
+
+The user has authorized automatic syncing and pushing of global skillshare skill changes as a standing workflow. Creating, editing, renaming, installing, updating, or removing a skill is not complete at local sync: validate the affected files, sync to configured targets, commit with a concise message, and push to the configured remote in the same task. This includes edits to these skillshare instructions. Do not ask the user to repeat the push request. An explicit request to keep changes local overrides this default.
+
+Use `skillshare push -m "message"` when the source working tree contains only the intended changes. It stages and commits source changes automatically; if unrelated user edits are present, commit only the intended paths through Git and push the configured branch without staging the unrelated work. Inspect actual output and the remote state: a zero exit code alone does not establish that the skillshare wrapper pushed successfully.
+
+If the remote has newer commits, fetch and integrate them while preserving both sides. Resolve every conflict before invoking `skillshare push` again: the wrapper can stage conflict markers and commit them. Check the Git conflict state, `git diff --check`, and parse modified JSON/YAML metadata before retrying. Do not force-push or discard another machine's skills. If a required check or integration fails, complete unaffected work and report the concrete blocker instead of claiming the push succeeded.
+
+Verify that the intended commit reached the remote and report the push outcome. If remote integration changes skill content, sync the resulting source again after validation. Read-only operations such as searches and status checks do not create a new commit or push by themselves. This preference concerns the global skills repository; it does not authorize pushing unrelated application repositories.
+
 ## pull
 
 Git pull from remote and sync to all targets. **Global mode only.**
