@@ -112,20 +112,13 @@
       }
     },
     "explain-diff-html": {
-<<<<<<< HEAD
-      "source": "/tmp/explain-diff-gist.wocPOn/package/explain-diff-html",
-      "type": "local",
-      "installed_at": "2026-09-15T15:18:09.070351754+02:00",
-=======
       "source": "/tmp/skillshare-gist-wZYnmfd6/explain-diff-html",
       "type": "local",
       "installed_at": "2026-10-02T14:02:27.61546814+02:00",
->>>>>>> origin/main
       "file_hashes": {
         "SKILL.md": "sha256:5bafcb8a6550b5a147dee443d0cbfc6c1c409b4775510730da752864441d26f7"
       }
     },
-<<<<<<< HEAD
     "explain-diff-notion": {
       "source": "/tmp/explain-diff-gist.wocPOn/package/explain-diff-notion",
       "type": "local",
@@ -134,8 +127,6 @@
         "SKILL.md": "sha256:29bb5ee1e20236b506dbcea6d61c6ca35dad23d5223652c4606df0bd6f0b655b"
       }
     },
-=======
->>>>>>> origin/main
     "git-guardrails-claude-code": {
       "source": "https://github.com/mattpocock/skills.git/skills/misc/git-guardrails-claude-code",
       "type": "github-subdir",
