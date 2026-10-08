@@ -1,4 +1,6 @@
 interface:
   display_name: "Review Loop"
-  short_description: "Review existing work, then repair in up to three reviews"
-  default_prompt: "Use $review-loop to review this branch/change set/task reference against requirements and thermo-nuclear standards, repairing blockers with handoff briefs within at most three reviews."
+  short_description: "Review existing work and repair substantiated findings"
+  default_prompt: "Use $review-loop to review this existing work and repair substantiated findings within the workflow's limits."
+policy:
+  allow_implicit_invocation: false
