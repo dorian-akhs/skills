@@ -405,6 +405,24 @@
         "agents/openai.yaml": "sha256:5af65e43ab41a350436697b81e27b7f848d36782043b73c322bb2c9fa9cc55dc"
       }
     },
+    "refactoring-ui": {
+      "source": "github.com/wondelai/skills/refactoring-ui",
+      "type": "github-subdir",
+      "branch": "main",
+      "installed_at": "2026-10-09T16:16:16.384902227+02:00",
+      "repo_url": "https://github.com/wondelai/skills.git",
+      "subdir": "refactoring-ui",
+      "version": "c172996",
+      "tree_hash": "55e561c9693156491e53bd93c5392188ba310a5d",
+      "file_hashes": {
+        "SKILL.md": "sha256:d10d15b81aa00f427811741d83ac2bb918aabfae3d4489c751615bdf85e1674c",
+        "references/accessibility-depth.md": "sha256:f6932aca3043aeff32c9f1581d29fc213da24fbbb094f00a3b6ed5af78afaabc",
+        "references/advanced-patterns.md": "sha256:73c2c1c9359d7715745b89b4074846873d1d278d487a5bcd6f06f4332e161814",
+        "references/animation-microinteractions.md": "sha256:9ffee063fdba3b18556f70631db575b98af298978493c228e6d1f6d2f4600454",
+        "references/data-visualization.md": "sha256:53401fa2cc58a2ae412d03e52fcbc53dc9d4acdd45aaed6c3747299273530bc6",
+        "references/theming-dark-mode.md": "sha256:61159934eee491713718d6a725e2e25e34aa73f2e6433214aca9afdc413212e6"
+      }
+    },
     "research": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/research",
       "type": "github-subdir",
