@@ -1,0 +1,4 @@
+interface:
+  display_name: "Entretien des connaissances"
+  short_description: "Consolider le contenu puis améliorer la navigation"
+  default_prompt: "Utilise $knowledge-maintenance sur le périmètre indiqué : consolide le contenu, puis améliore les liens et les parcours de lecture, avec un plan commun avant restructuration."
