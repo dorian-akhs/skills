@@ -1,0 +1,4 @@
+interface:
+  display_name: "Navigation des connaissances"
+  short_description: "Améliorer les liens, index et parcours de lecture"
+  default_prompt: "Utilise $knowledge-navigation pour améliorer les points d’entrée et les liens du périmètre indiqué, pour un humain comme pour un agent."
