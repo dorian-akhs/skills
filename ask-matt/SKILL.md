@@ -12,6 +12,11 @@ A **flow** is a path through the skills. Most paths run along one **main flow**,
 
 ## The main flow: idea → ship
 
+After `/grill-with-docs`, invoke **`/review-design`** when you want to own
+the solution design before `/to-spec` or implementation. It uses
+`/codebase-design` to review module responsibilities, interfaces, alternatives,
+and testing seams with you, then carries the agreed choices forward.
+
 The route most work travels. You have an idea and want it built.
 
 1. **`/grill-with-docs`** — sharpen the idea by interview. Start here whenever you are **working in a working directory**: it's stateful, retaining what it learns in `CONTEXT.md` and ADRs. (No working directory? Use `/grill-me` — see Standalone. Both run the same `/grilling` primitive; `grill-with-docs` is the one that leaves a paper trail, which makes it the better of the two whenever a repo is there to leave it in.)

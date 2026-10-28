@@ -1,0 +1,5 @@
+interface:
+  display_name: "Review Design"
+  short_description: "Agree module design before implementation"
+policy:
+  allow_implicit_invocation: false
