@@ -1,0 +1,4 @@
+interface:
+  display_name: "Consolidation des connaissances"
+  short_description: "Clarifier les notes et réduire les répétitions"
+  default_prompt: "Utilise $knowledge-consolidation pour auditer et proposer la consolidation du périmètre indiqué, en préservant les sources et les nuances."

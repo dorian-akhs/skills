@@ -1,0 +1,4 @@
+interface:
+  display_name: "To Architecture"
+  short_description: "Discuss and agree on architecture before coding"
+  default_prompt: "Use $to-architecture to propose and discuss the architecture for this feature, agree on consequential choices with me, and capture the decisions before implementation."
