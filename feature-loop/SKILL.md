@@ -61,7 +61,8 @@ harness can spawn agents on another provider:
 | Role | Model | Effort |
 | --- | --- | --- |
 | Implementer (step 2 or ticket workers) and repair executor | GPT Sol (`gpt-6.1-sol`) | high |
-| Matt reviewer, final structural reviewer, and repair handoff writer | Claude Opus 5.5 (`claude-opus-5-5`) | high |
+| Matt reviewer, its Standards and Spec children, and repair handoff writer | GPT Sol (`gpt-6.1-sol`) | high |
+| Final structural reviewer | Claude Opus 5.5 (`claude-opus-5-5`) | high |
 
 During setup, before the first dispatch, check for cross-provider delegation:
 for example, T3 Code's `orchestrator_capabilities` reports
@@ -75,12 +76,11 @@ implementers retain `implement-spec`'s checkout isolation and integration rules.
 Record the resolved provider, model, and effort for each role in `state.md`.
 
 If Claude reports exhausted subscription credits or a subscription usage limit
-at setup or during a worker run, switch the Claude-routed roles above to GPT Sol
+at setup or during the final structural review, switch that role to GPT Sol
 (`gpt-6.1-sol`) with high effort (`reasoningEffort: "high"` in T3 Code) for the
 rest of this run. Tell the user and record the credit failure and resolved routing
-in `state.md`; pass the fallback to each worker's brief. The Matt reviewer's
-Standards and Spec children inherit GPT Sol high too. Use a fresh independent
-reviewer for any permitted retry, carrying forward the same scope, evidence,
+in `state.md`; pass the fallback to the final reviewer's brief. Use a fresh
+independent reviewer for any permitted retry, carrying forward the same scope, evidence,
 and consumed counters. A failed review still consumes its dispatch budget; this
 fallback does not authorize another final review or extend the loop. If GPT Sol
 high is unavailable, report the blocker instead of silently substituting another
