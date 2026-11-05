@@ -30,7 +30,8 @@ When the harness supports cross-provider agents, route workers as follows:
 
 | Role | Model | Effort |
 | --- | --- | --- |
-| Matt reviewer, its Standards and Spec children, and final structural reviewer | Claude Opus 5.5 (`claude-opus-5-5`) | high |
+| Matt reviewer and its Standards and Spec children | GPT Sol (`gpt-6.1-sol`) | high |
+| Final structural reviewer | Claude Opus 5.5 (`claude-opus-5-5`) | high |
 | Repair handoff writer and repair executor | GPT Sol (`gpt-6.1-sol`) | high |
 
 Before the first dispatch, check the harness's provider, model, and effort
@@ -43,7 +44,7 @@ request a routing decision before substituting another model.
 Use `isolation: "shared"` in the integration checkout for review, handoff, and
 repair workers so they see scoped uncommitted changes. Finish every writer
 before reviewing the combined tree. Keep reviewers independent from repair
-workers; the Matt reviewer's two axis children use Opus high too. Context
+workers; the Matt reviewer's two axis children use Sol high too. Context
 research stays on the coordinator's default. Record resolved provider, model,
 and effort assignments in `state.md`; routing preserves the shared workflow's
 review budget and stopping conditions.
