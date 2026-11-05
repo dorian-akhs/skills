@@ -25,6 +25,33 @@ commits, pushes, and deployment require their own authorization.
    [review and repair workflow](../thermo-nuclear-code-quality-review/references/loop-review.md)
    through its completion or stopping condition.
 
+## Model routing
+
+Route each worker this workflow dispatches to its role's preferred model when the
+harness can spawn agents on another provider:
+
+| Role | Model | Effort |
+| --- | --- | --- |
+| Implementer (step 2) and repair executor | GPT Sol (`gpt-6.1-sol`) | high |
+| Matt reviewer, final structural reviewer, and repair handoff writer | Claude Opus 5.5 (`claude-opus-5-5`) | high |
+
+During setup, before the first dispatch, check for cross-provider delegation:
+for example, T3 Code's `orchestrator_capabilities` reports
+`canRunCrossProviderChildTask` with each provider's models and options. Dispatch
+through that harness's tool. In T3 Code, call `delegate_task` with
+`target.providerInstanceId`, `target.model`, and the effort option it lists
+(Codex `reasoningEffort`, Claude `effort`), the matching `role`, and
+`isolation: "shared"`; a worktree child cannot see the run's uncommitted changes.
+Record the resolved provider, model,
+and effort for each role in `state.md`.
+
+The Matt reviewer's Standards and Spec children run on the reviewer's own model.
+Context research stays on the coordinator's default. When cross-provider
+delegation or a preferred model is unavailable, dispatch that role with the
+harness's native workers, record the substitution in `state.md`, and tell the
+user before the first dispatch. Routing never relaxes reviewer independence or
+the dispatch budget.
+
 The shared references ship with `thermo-nuclear-code-quality-review`; install or
 sync that package alongside this skill. Reading its plain references does not
 invoke its user-only skill. Project instructions supply tracker, domain,
