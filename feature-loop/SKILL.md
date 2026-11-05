@@ -74,6 +74,18 @@ its uncommitted changes. Standalone implementers also use that checkout; ticket
 implementers retain `implement-spec`'s checkout isolation and integration rules.
 Record the resolved provider, model, and effort for each role in `state.md`.
 
+If Claude reports exhausted subscription credits or a subscription usage limit
+at setup or during a worker run, switch the Claude-routed roles above to GPT Sol
+(`gpt-6.1-sol`) with high effort (`reasoningEffort: "high"` in T3 Code) for the
+rest of this run. Tell the user and record the credit failure and resolved routing
+in `state.md`; pass the fallback to each worker's brief. The Matt reviewer's
+Standards and Spec children inherit GPT Sol high too. Use a fresh independent
+reviewer for any permitted retry, carrying forward the same scope, evidence,
+and consumed counters. A failed review still consumes its dispatch budget; this
+fallback does not authorize another final review or extend the loop. If GPT Sol
+high is unavailable, report the blocker instead of silently substituting another
+model. Other Claude failures do not trigger this credit fallback.
+
 The Matt reviewer's Standards and Spec children run on the reviewer's own model.
 Context research stays on the coordinator's default. When cross-provider
 delegation or a preferred model is unavailable, dispatch that role with the
