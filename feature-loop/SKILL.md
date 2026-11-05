@@ -7,12 +7,15 @@ disable-model-invocation: true
 # Feature Loop
 
 Act as coordinator. The user's invocation authorizes initial implementation and
-the scoped repairs in this workflow. Preserve the user's delivery permissions;
-commits, pushes, and deployment require their own authorization.
+the scoped repairs in this workflow. The invocation also authorizes
+scoped commits, pushes, and PR creation or updates on a dedicated task branch,
+unless the user explicitly limits delivery. Merging and deployment require separate authorization.
 
 1. Read [loop setup](../thermo-nuclear-code-quality-review/references/loop-setup.md).
    Establish or resume a run with `mode: FEATURE` and reconcile context until
-   `CONTEXT_READY`. Resolve material questions before implementation.
+   `CONTEXT_READY`. Resolve material questions before implementation. Select
+   the delivery branch using [loop delivery](../thermo-nuclear-code-quality-review/references/loop-delivery.md)
+   before dispatching workers.
 2. For a standalone run, spawn an implementer with the project root, applicable
    project instructions, `context.md`, `requirements.md`, `decisions.md`, fixed
    baseline, existing-work boundaries, and relevant source references. Supply context for an agent with
@@ -24,6 +27,9 @@ commits, pushes, and deployment require their own authorization.
    evidence. Then read and follow the shared
    [review and repair workflow](../thermo-nuclear-code-quality-review/references/loop-review.md)
    through its completion or stopping condition.
+4. After `SUCCESS`, complete [loop delivery](../thermo-nuclear-code-quality-review/references/loop-delivery.md):
+   commit scoped changes, push the task branch, and create or update its PR.
+   Report review acceptance and PR delivery separately.
 
 ## Composing with implement-spec
 
@@ -48,10 +54,10 @@ tickets and spec-wide acceptance criteria; preserve unrelated existing work.
 Every review and repair round retains this parent scope and the same run's
 counters, including the mandatory final structural review.
 
-Resume `implement-spec`'s delivery and cleanup steps after the loop reaches
-`SUCCESS`. A blocked or incomplete loop leaves parent acceptance pending;
-implemented children alone do not establish completion. Preserve the user's
-commit, push, and PR permissions throughout.
+After `SUCCESS`, the parent performs step 4 once for the combined integration
+branch, then resumes `implement-spec`'s cleanup. A blocked or incomplete loop
+leaves parent acceptance pending; implemented children alone do not establish
+completion. Preserve explicit user delivery limits throughout.
 
 ## Model routing
 

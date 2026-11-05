@@ -7,15 +7,18 @@ disable-model-invocation: true
 # Review Loop
 
 Act as coordinator. The user's invocation authorizes independent review and the
-scoped repairs in this workflow. Preserve the user's delivery permissions;
-commits, pushes, and deployment require their own authorization.
+scoped repairs in this workflow. The invocation also authorizes
+scoped commits, pushes, and PR creation or updates on a dedicated task branch,
+unless the user explicitly limits delivery. Merging and deployment require separate authorization.
 
 Example: `$review-loop Review <branch/change set/files/task reference>`.
 
 1. Read [loop setup](../thermo-nuclear-code-quality-review/references/loop-setup.md).
    Establish or resume a run with `mode: REVIEW` and reconcile context until
    `CONTEXT_READY`. Identify the intended behavior of the existing work rather
-   than inventing a new implementation task.
+   than inventing a new implementation task. Select the delivery branch using
+   [loop delivery](../thermo-nuclear-code-quality-review/references/loop-delivery.md)
+   before dispatching workers.
 2. Record the existing work, scoped paths, accumulated changes, observed behavior,
    and available verification evidence. Label missing or stale checks explicitly.
    Preparation is read-only for application code; the first Matt review examines
@@ -23,6 +26,9 @@ Example: `$review-loop Review <branch/change set/files/task reference>`.
 3. Read and follow the shared
    [review and repair workflow](../thermo-nuclear-code-quality-review/references/loop-review.md)
    through its completion or stopping condition. A clean run needs no implementer.
+4. After `SUCCESS`, complete [loop delivery](../thermo-nuclear-code-quality-review/references/loop-delivery.md):
+   commit scoped changes, push the task branch, and create or update its PR.
+   Report review acceptance and PR delivery separately.
 
 ## Model routing
 
