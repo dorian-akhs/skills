@@ -25,7 +25,10 @@ Example: `$review-loop Review <branch/change set/files/task reference>`.
    the existing implementation before any repair worker starts.
 3. Read and follow the shared
    [review and repair workflow](../thermo-nuclear-code-quality-review/references/loop-review.md)
-   through its completion or stopping condition. A clean run needs no implementer.
+   through its completion or stopping condition. Both phases fix validated P0/P1
+   blockers automatically; P2 findings await user selection and P3 findings are
+   reported briefly. The structural phase permits up to three reviews; its third
+   attempt is assessment-only. A clean run needs no implementer.
 4. After `SUCCESS`, complete [loop delivery](../thermo-nuclear-code-quality-review/references/loop-delivery.md):
    commit scoped changes, push the task branch, and create or update its PR.
    Report review acceptance and PR delivery separately.
@@ -34,11 +37,11 @@ Example: `$review-loop Review <branch/change set/files/task reference>`.
 
 When the harness supports cross-provider agents, route workers as follows:
 
-| Role | Model | Effort |
-| --- | --- | --- |
-| Matt reviewer and its Standards and Spec children | GPT Sol (`gpt-6.1-sol`) | high |
-| Final structural reviewer | Claude Opus 5.5 (`claude-opus-5-5`) | high |
-| Repair handoff writer and repair executor | GPT Sol (`gpt-6.1-sol`) | high |
+| Role                                              | Model                               | Effort |
+| ------------------------------------------------- | ----------------------------------- | ------ |
+| Matt reviewer and its Standards and Spec children | GPT Sol (`gpt-6.1-sol`)             | high   |
+| Final structural reviewer                         | Claude Opus 5.5 (`claude-opus-5-5`) | high   |
+| Repair handoff writer and repair executor         | GPT Sol (`gpt-6.1-sol`)             | high   |
 
 Before the first dispatch, check the harness's provider, model, and effort
 capabilities. In T3 Code, use `orchestrator_capabilities`, then `delegate_task`

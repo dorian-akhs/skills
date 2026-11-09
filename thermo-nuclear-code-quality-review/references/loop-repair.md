@@ -1,7 +1,9 @@
 # Loop repair
 
-Read this branch only when actionable blockers or failed requirements require
-implementation. Repairs remain within the requested scope and justified
+Read this branch only for coordinator-validated P0/P1 repairs under the
+[acceptance policy](loop-review.md#acceptance-policy), or user-authorized P2 work
+within the remaining repair budget. Structural attempt three is assessment-only;
+its findings require an explicit user extension before another repair pass. Repairs remain within the requested scope and justified
 structural changes needed to resolve those findings.
 
 ## Prepare the brief
@@ -14,13 +16,14 @@ recorded catalog/configured locations. If missing or user-only without a permitt
 entry point, stop with `BLOCKED_HANDOFF` and preserve unresolved findings.
 
 Create `<run-directory>/handoff-<n>/` for Matt repairs or
-`<run-directory>/handoff-final/` for final repairs. Use a fresh directory with no
+`<run-directory>/handoff-structural-<n>/` for structural repairs after attempt
+`<n>` (one or two). Use a fresh directory with no
 active `HANDOFF-IMPLEMENT.md`; preserve unrelated briefs. Spawn a handoff writer
 with that working directory, the dependency's actual path, and a Create-mode-only
 assignment. Run application commands in the absolute project root.
 
 Supply the original requirements, context and source references, decisions,
-accepted answers, review reports, all outstanding finding IDs, check results,
+accepted answers, review reports, all authorized repair finding IDs and priorities, deferred P2/P3 IDs, check results,
 project instructions, project root, and scope/ownership boundaries. Require the
 dependency's full measured brief contract, including its execution shape,
 bounded read sets, per-agent prompt contract, and verification plan. Mark new
@@ -57,5 +60,7 @@ the result. Implementation claims and the brief alone are not repair evidence.
 
 The executor may remove its active `HANDOFF-IMPLEMENT.md` only after satisfying
 the dependency's completion criteria. Keep the archive and unresolved active
-briefs. An interrupted assignment resumes from its existing brief; a completed
-final repair pass needs an explicit user extension before another repair dispatch.
+briefs. An interrupted assignment resumes from its existing brief. After a completed
+structural repair pass, return to the coordinator for the next independent
+structural review; do not dispatch another repair pass from the same findings.
+Keep deferred P2/P3 findings outside executable tasks unless explicitly authorized.

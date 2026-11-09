@@ -26,7 +26,10 @@ unless the user explicitly limits delivery. Merging and deployment require separ
 3. Wait for all writers, inspect their changes, and persist the implementation
    evidence. Then read and follow the shared
    [review and repair workflow](../thermo-nuclear-code-quality-review/references/loop-review.md)
-   through its completion or stopping condition.
+   through its completion or stopping condition. Both phases fix validated P0/P1
+   blockers automatically; P2 findings await user selection and P3 findings are
+   reported briefly. The structural phase permits up to three reviews; its third
+   attempt is assessment-only.
 4. After `SUCCESS`, complete [loop delivery](../thermo-nuclear-code-quality-review/references/loop-delivery.md):
    commit scoped changes, push the task branch, and create or update its PR.
    Report review acceptance and PR delivery separately.
@@ -52,7 +55,7 @@ against the original baseline and parent specification, including committed,
 staged, unstaged, and relevant untracked changes. Include interactions between
 tickets and spec-wide acceptance criteria; preserve unrelated existing work.
 Every review and repair round retains this parent scope and the same run's
-counters, including the mandatory final structural review.
+counters, including the mandatory bounded structural review phase.
 
 After `SUCCESS`, the parent performs step 4 once for the combined integration
 branch, then resumes `implement-spec`'s cleanup. A blocked or incomplete loop
@@ -64,11 +67,11 @@ completion. Preserve explicit user delivery limits throughout.
 Route each worker this workflow dispatches to its role's preferred model when the
 harness can spawn agents on another provider:
 
-| Role | Model | Effort |
-| --- | --- | --- |
-| Implementer (step 2 or ticket workers) and repair executor | GPT Sol (`gpt-6.1-sol`) | high |
-| Matt reviewer, its Standards and Spec children, and repair handoff writer | GPT Sol (`gpt-6.1-sol`) | high |
-| Final structural reviewer | Claude Opus 5.5 (`claude-opus-5-5`) | high |
+| Role                                                                      | Model                               | Effort |
+| ------------------------------------------------------------------------- | ----------------------------------- | ------ |
+| Implementer (step 2 or ticket workers) and repair executor                | GPT Sol (`gpt-6.1-sol`)             | high   |
+| Matt reviewer, its Standards and Spec children, and repair handoff writer | GPT Sol (`gpt-6.1-sol`)             | high   |
+| Final structural reviewer                                                 | Claude Opus 5.5 (`claude-opus-5-5`) | high   |
 
 During setup, before the first dispatch, check for cross-provider delegation:
 for example, T3 Code's `orchestrator_capabilities` reports
@@ -88,7 +91,8 @@ rest of this run. Tell the user and record the credit failure and resolved routi
 in `state.md`; pass the fallback to the final reviewer's brief. Use a fresh
 independent reviewer for any permitted retry, carrying forward the same scope, evidence,
 and consumed counters. A failed review still consumes its dispatch budget; this
-fallback does not authorize another final review or extend the loop. If GPT Sol
+fallback does not extend either phase's review budget or authorize repairs after
+structural attempt three. If GPT Sol
 high is unavailable, report the blocker instead of silently substituting another
 model. Other Claude failures do not trigger this credit fallback.
 

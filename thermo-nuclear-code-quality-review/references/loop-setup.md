@@ -35,7 +35,10 @@ precedence over dependency defaults.
 
 On resumption, read the existing `state.md`, requirements, context, decisions, and
 artifacts first. Resume its recorded phase and collect any in-flight results.
-Preserve consumed counters and flags; create a new run only for a new task.
+Preserve consumed counters; create a new run only for a new task. For older runs,
+map `final_review_used: true` to one structural attempt and
+`final_repair_used: true` to one structural repair pass. Keep their reports and
+all Matt counters; migration to this policy never resets consumed budget.
 
 For a new run:
 
@@ -58,8 +61,8 @@ For a new run:
    existing runs and unrelated handoff briefs.
 5. Initialize `state.md` with `mode`, `phase`, scope, baseline SHA or snapshot,
    starting HEAD, dependency paths, worker assignments, artifact paths,
-   `reviews_used: 0`, `max_reviews: 3`, `final_review_used: false`, and
-   `final_repair_used: false`. Store numbered criteria in `requirements.md`.
+   `reviews_used: 0`, `max_reviews: 3`, `structural_reviews_used: 0`,
+   `max_structural_reviews: 3`, and `structural_repairs_used: 0`. Store numbered criteria in `requirements.md`.
    Maintain `decisions.md` with IDs, rationale, owner, and status (`DECIDED`,
    `PROPOSED`, or `NEEDS_USER_INPUT`). Persist state before dispatch and after
    every result.

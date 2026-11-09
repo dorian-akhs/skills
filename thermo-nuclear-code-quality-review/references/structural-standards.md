@@ -2,6 +2,12 @@
 
 Above all, this skill should push the reviewer to be **ambitious** about code structure. Do not merely identify local cleanup opportunities. Actively search for "code judo" moves: restructurings that preserve behavior while making the implementation dramatically simpler, smaller, more direct, and more elegant.
 
+For `feature-loop` and `review-loop`, the shared
+[acceptance policy](loop-review.md#acceptance-policy) governs severity, automatic
+repairs, and stopping. The inspection signals below are not automatic blockers.
+In standalone reviews, report concrete impact and remedies within the user's
+scope; the loop's repair authorization does not apply.
+
 ## Core Prompt
 
 Start from this baseline:
@@ -172,7 +178,7 @@ The bar for approval is:
 - no clear architecture-boundary leak or avoidable canonical-helper duplication
 - no missed opportunity for an obvious decomposition that would materially improve maintainability
 
-Treat these as presumptive blockers unless the author can justify them clearly:
+Investigate these signals and substantiate their impact before assigning severity:
 
 - the PR preserves a lot of incidental complexity when there is a plausible code-judo move that would delete it
 - the PR pushes a file from below 1000 lines to above 1000 lines
@@ -181,4 +187,8 @@ Treat these as presumptive blockers unless the author can justify them clearly:
 - the PR adds an unnecessary abstraction, wrapper, or cast-heavy contract that makes the design more indirect
 - the PR duplicates an existing helper or puts logic in the wrong layer when there is a clear canonical home
 
-If those conditions are not met, leave explicit, actionable feedback and push for a cleaner decomposition.
+For material simplifications, name the machinery that can disappear, the
+maintenance burden it creates, the simpler alternative, and how required behavior
+survives. Challenge whether the machinery is needed before making it more elaborate.
+A plausible alternative or threshold alone does not establish a blocker. Report
+less consequential improvements without requiring a rewrite.
