@@ -63,6 +63,15 @@ facts, inferred implementation choices, and user decisions. Reconcile findings
 into `requirements.md` and `decisions.md`; carry relevant evidence into every
 worker prompt and repair brief.
 
+For documentation or evidence deliverables, name the canonical record using the
+project's source-ownership rules. Require links to maintained policy, delivery
+status and launch prerequisites rather than copies in repository docs. Reserve
+repository documentation for code-maintenance needs and decisions assigned there
+by the project. Do not turn a handoff requirement into a repository-file
+requirement without an established reason. Reconcile conflicting location
+requirements before dispatch; factual accuracy alone does not establish that
+information belongs in the requested location.
+
 ## Readiness checklist
 
 Set `CONTEXT_READY` only when each item has evidence or a justified not-applicable
