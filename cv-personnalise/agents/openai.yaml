@@ -1,4 +1,4 @@
 interface:
   display_name: "CV personnalisé"
-  short_description: "CV ciblé sur une offre, preuves et présentation soignée"
-  default_prompt: "Utilise $cv-personnalise pour générer mon CV à partir de cette offre, avec les questions nécessaires et le style de mes CV précédents."
+  short_description: "CV ciblé avec format ATS prioritaire et preuves vérifiées"
+  default_prompt: "Utilise $cv-personnalise pour générer mon CV à partir de cette offre, avec les questions nécessaires et les règles ATS prioritaires."

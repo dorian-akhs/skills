@@ -14,8 +14,8 @@ Chemins relatifs au vault :
 - **Réalisations détaillées** : suivre les liens du profil vers Timelab, Coin District, Gascon, CPTS Nougaro et les récits d'entretien. Lire les instructions du dossier avant d'accéder à ses notes. Distinguer observation du code, témoignage et travail prévu.
 - **Chronologie historique** : `3 Garden/Profil Freelance - 2026-08-13 - Ancien profil Malt.md`, à recouper avec le profil consolidé.
 - **Anciens exports** : `_/Attachments/Dorian Penin - CV * - EN.pdf`. Choisir les références les plus proches pour la comparaison de contenu ; Proton et Joko donnent le style historique préféré. Les notes de candidature liées par le profil contiennent parfois leur texte modifiable.
-- **Portrait** : `_/Attachments/Dorian Penin - Photo professionnelle.jpg`. Réutiliser cette photo, sans la remplacer par un visage généré. Sans original accessible, demander la photo ou extraire celle du PDF de référence pour la mise en page locale.
-- **Exports finaux** : `_/Attachments/Dorian Penin - CV <Entreprise> - <Langue>.pdf` et version `.txt`. Ajouter le rôle si plusieurs candidatures ciblent la même entreprise. Reprendre un nom existant pour une révision du même CV.
+- **Portrait, seulement pour une variante visuelle demandée** : `_/Attachments/Dorian Penin - Photo professionnelle.jpg`. Réutiliser cette photo, sans la remplacer par un visage généré. Sans original accessible, demander la photo ou extraire celle du PDF de référence pour la mise en page locale.
+- **Exports finaux** : dossier `_/Attachments/`, avec le nommage ATS défini dans `SKILL.md` et une version `.txt`. Les anciens fichiers au nom français sont des exports historiques ; préserver les autres candidatures et distinguer les variantes visuelles.
 
 ## Accès et pérennité
 
