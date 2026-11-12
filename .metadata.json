@@ -686,11 +686,11 @@
       "type": "local",
       "installed_at": "2026-11-12T12:43:36.505655163+01:00",
       "file_hashes": {
-        "SKILL.md": "sha256:13aba2e138059a368d13989591ae6043927681b21d6ff63e61e8098024ea1cad",
-        "agents/openai.yaml": "sha256:00f6e44380506a023bafa9cf997b26dd6bad6f086c1cf23bbc6c4e285e4c0d06",
+        "SKILL.md": "sha256:c8c05dbf6246d9e7a1403e1fc3338d0f13b7a256fab528050d351d5d35535f85",
+        "agents/openai.yaml": "sha256:f24fc44f975d7d5296849e29a56aa1471f020b0771591ca8760ef2b55654f271",
         "assets/reference-cv.pdf": "sha256:c5a53a3c6c3b395fd9ffcdcc5073244d8fc91756fd4ce666322822602f3aebef",
-        "references/contexte.md": "sha256:c691a96611932f0ffa2d572435235e94518165fb48ba4f88b66cbaa45101f44e",
-        "references/presentation.md": "sha256:b5e511b517d50b4a973de7fc0b1d9a732b31eede02f47b4f4764493a404fdcd5",
+        "references/contexte.md": "sha256:04724a9f50628a7d36c40594bdba08c638717d0c036b5f2e97f54613bf851760",
+        "references/presentation.md": "sha256:2460aaefff82b6be998664c2be4ad55c3d708a7bb7d8048d9a713836620391f2",
         "references/resume-ats-optimizer-LICENSE.txt": "sha256:779da7ca4855d53a7800c744fef206c6265ace2e1eefef8ab608a0ccfb6d751d",
         "references/resume-ats-optimizer-source.json": "sha256:7c4dfa947036f06511393f8f8fe139b450f92433473a66e9a1a312b1fd447574",
         "references/resume-ats-optimizer.md": "sha256:03ad07d45afa209a41f8a0acdfc4286bc61ededd8371ced5242b5caf97d86702"

@@ -1,8 +1,8 @@
 # Présentation du CV et de la lettre
 
-## Format ATS prioritaire
+## Version ATS pour les formulaires
 
-Appliquer d'abord [resume-ats-optimizer](resume-ats-optimizer.md). La préférence antérieure photo/colonne technique est remplacée par une version de candidature linéaire, à une seule colonne. La copie intégrée conserve sa [provenance](resume-ats-optimizer-source.json) et sa [licence MIT](resume-ats-optimizer-LICENSE.txt).
+Pour le mode ATS, appliquer d'abord [resume-ats-optimizer](resume-ats-optimizer.md). Ses contraintes priment sur les préférences visuelles dans ce mode. La copie intégrée conserve sa [provenance](resume-ats-optimizer-source.json) et sa [licence MIT](resume-ats-optimizer-LICENSE.txt).
 
 - Format accepté par le portail : PDF textuel ou DOCX. Coordonnées dans le corps du document ; nom, courriel, téléphone s'il est connu, ville et liens lisibles. Les liens sont du texte, pas des icônes. Placer le portfolio et le code public dans Skills ou dans une section standard pertinente.
 - Police standard incorporée au PDF : Arial, Calibri, Georgia ou Times New Roman. Corps de 10 à 12 points ; titres de rubriques de 14 à 16 points. Le nom du candidat peut être plus grand.
@@ -11,19 +11,29 @@ Appliquer d'abord [resume-ats-optimizer](resume-ats-optimizer.md). La préféren
 - Dates MM/YYYY lorsqu'elles sont connues, selon une convention cohérente. Demander les mois utiles manquants ; conserver une précision à l'année cohérente pour les périodes documentées ainsi, ou omettre les dates de sous-projets sous une activité datée. Préserver l'exactitude plutôt que fabriquer des mois.
 - Ajuster la sélection et la longueur du contenu avant la taille des caractères. Accepter deux pages lisibles plutôt qu'une page surchargée ; une coupure ne sépare pas un titre de son contenu.
 
-## Style personnel compatible
+## Style sobre de la version ATS
 
 Le style reste soigné et sobre : nom et projets en bleu nuit, quelques titres ou liens en vert profond, corps sombre sur fond blanc. La couleur ne porte aucune information à elle seule. Utiliser les espaces et deux graisses pour la hiérarchie ; éviter les fonds et décorations du modèle historique.
 
 Palette disponible : bleu nuit `hsl(208,45%,18%)`, texte `hsl(208,26%,23%)`, secondaire `hsl(208,19%,37%)`, vert `hsl(174,78%,24%)`. Des couleurs différentes ne changent jamais l'ordre de lecture.
 
-`../assets/reference-cv.pdf` reste une archive de présentation du 12 novembre 2026. Sa photo, ses colonnes, son corps inférieur à 10 points et son encadré musical ne constituent plus un modèle de format ATS. Pour une entreprise musicale, intégrer l'expérience musicale en texte simple dans une rubrique pertinente.
+En mode ATS, la photo, les colonnes, le corps inférieur à 10 points et l'encadré musical de `../assets/reference-cv.pdf` ne s'appliquent pas. Pour une entreprise musicale, intégrer l'expérience musicale en texte simple dans une rubrique pertinente.
 
-Une variante esthétique avec photo ou colonnes ne se crée que sur demande explicite ultérieure, sous un nom distinct. Elle ne remplace pas le livrable ATS et n'est pas présentée comme respectant la checklist.
+## Version Humain pour un envoi direct
 
-## Audit et livraison
+Inspecter `../assets/reference-cv.pdf` comme référence de composition. Retrouver le style validé pendant la session : nom et projets en bleu nuit, rôles et rubriques en vert profond, colonne technique de droite sur fond vert très pâle. Dans cette colonne, photo professionnelle existante en haut, puis contact, compétences par famille, formation et langues ; expériences dans la colonne principale.
 
-Relire la checklist du skill ATS sur le document exporté, puis comparer son texte extrait au texte source retenu. La lecture humaine du rendu et le contrôle d'extraction sont complémentaires. Un défaut de format ou de parsing doit être corrigé avant livraison. Un rapport bref indique les contrôles réalisés et les manques de compétences ; un diagnostic détaillé suit les catégories format, mise en page, mots-clés et corrections de la référence ATS. Les scores éventuels restent des mesures de couverture explicites, pas une simulation certifiée de l'ATS employeur.
+- Utiliser le portrait existant indiqué dans `contexte.md` lorsque les consignes autorisent une photo. Une demande sans photo ou les consignes employeur restent applicables à l'envoi humain. Sans portrait accessible, poursuivre une version sans photo ou demander le fichier si sa présence est nécessaire.
+- Réserver une largeur suffisante aux preuves, coordonnées et compétences. Hiérarchie par taille, graisse, couleur et espaces ; éviter de surcharger le panneau et de réduire excessivement le corps.
+- Cible typographique indicative : corps de 9 à 10,5 points avec interligne confortable, nom dominant, titres de projets lisibles. Privilégier une sélection éditoriale ou deux pages à du texte minuscule.
+- Utiliser de façon mesurée les fonds teintés, traits et quelques expressions en gras. Un encadré musical convient lorsque pertinent pour l'offre ; ailleurs, donner cet espace aux preuves utiles.
+- Garder le texte sélectionnable, les liens actifs et le contenu factuellement identique à la version ATS lorsqu'elle est aussi demandée. Les reformulations ou condensations gardent les mêmes responsabilités et limites.
+- Identifier clairement cette version comme destinée à une lecture humaine. Elle peut être livrée seule pour un envoi direct, ou avec la version ATS pour un usage mixte. Sa photo ou sa colonne ne sont pas présentées comme conformes à la checklist ATS.
+
+
+## Audit et livraison selon le mode
+
+Dans les deux modes, inspecter le rendu et contrôler l'intégrité du contenu extrait. En mode Humain à colonnes, extraire chaque colonne pour ce contrôle si nécessaire. Pour l'ATS, ajouter la checklist stricte et la vérification de l'ordre de lecture linéaire ; corriger tout défaut de format ou de parsing avant de livrer cette version. Un rapport bref mentionne les contrôles applicables et les manques de compétences. Les scores éventuels restent des mesures de couverture explicites, pas une simulation certifiée de l'ATS employeur.
 
 ## Lettre de motivation, sur demande
 
