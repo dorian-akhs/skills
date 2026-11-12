@@ -680,6 +680,18 @@
         "SKILL.md": "sha256:67d34422bbe43cfd523dea9fe7b3ec5260791aed8ea52309b5b85f9d76f32745",
         "agents/openai.yaml": "sha256:56de45430e23104ff178415f5ecf7821d51a9cfabd8814b1607ebf39da2ef5cd"
       }
+    },
+    "cv-personnalise": {
+      "source": "/mnt/c/Users/Dorian/Documents/_Dev/pro-vault/.agents/skills/cv-personnalise",
+      "type": "local",
+      "installed_at": "2026-11-12T12:43:36.505655163+01:00",
+      "file_hashes": {
+        "SKILL.md": "sha256:e5542665c98238be26a339773d0cc903b9af5cc1f978e4c9f78bded986c4ce97",
+        "agents/openai.yaml": "sha256:3f6c3207b31e1569e000203a5fd40a13a8f3c3268b58dedae95fdbf3404ac2ee",
+        "assets/reference-cv.pdf": "sha256:c5a53a3c6c3b395fd9ffcdcc5073244d8fc91756fd4ce666322822602f3aebef",
+        "references/contexte.md": "sha256:281cd83a3353fd4213b71392adddde08689b5d2de7aa12654ead24e2b20caf14",
+        "references/presentation.md": "sha256:df85f5bdd799f7b0ed6c3d7e2f0950b0ef41cf787b1a137dcb082fc3fcaf9094"
+      }
     }
   }
 }
