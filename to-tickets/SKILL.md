@@ -10,6 +10,26 @@ Break a plan, spec, or conversation into a set of **tickets** — tracer-bullet 
 
 The issue tracker and triage label vocabulary should have been provided to you — run `/setup-matt-pocock-skills` if not.
 
+## Preparation for implement-spec
+
+When the user invokes their global `implement-spec`, that invocation authorizes
+this skill's ticket preparation and publication for the supplied specification.
+Use this mode when the parent coordinator reads this file through its adjacent
+global skill path.
+
+Read the existing tickets before drafting. Reuse their scope, identifiers, and
+dependencies, and complete only missing specification coverage. Recheck the
+tracker before creating each ticket so a retry reuses tickets already published.
+Publish child tickets under the existing specification parent when supported.
+
+For a specification whose product decisions are settled, perform steps 1–3 and
+5 directly. Show the resulting breakdown and proceed to implementation without
+waiting for granularity approval. Ask the user when an unresolved decision
+changes scope, expected behavior, or acceptance criteria, then resume after it
+is resolved. Follow the project's tracker and delivery requirements throughout.
+
+When invoked on its own, use the interactive approval in step 4.
+
 ## Process
 
 ### 1. Gather context

@@ -36,9 +36,12 @@ unless the user explicitly limits delivery. Merging and deployment require separ
 
 ## Composing with implement-spec
 
-When the user requests `implement-spec using feature-loop`, the parent
-`implement-spec` coordinator owns one feature-loop run for the entire supplied
-specification. Complete step 1 before ticket implementation; record the parent
+When the user requests `implement-spec using feature-loop`, read the adjacent
+global [implement-spec](../implement-spec/SKILL.md). Its coordinator owns one
+feature-loop run for the entire supplied specification. Complete its ticket
+preparation before dispatching implementers, reusing existing tickets and
+creating missing coverage through the adjacent global `to-tickets`.
+Complete step 1 before ticket implementation; record the parent
 specification, all acceptance criteria, integration checkout, fixed baseline,
 and existing-work boundaries in that run.
 

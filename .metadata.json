@@ -695,6 +695,20 @@
         "references/resume-ats-optimizer-source.json": "sha256:7c4dfa947036f06511393f8f8fe139b450f92433473a66e9a1a312b1fd447574",
         "references/resume-ats-optimizer.md": "sha256:03ad07d45afa209a41f8a0acdfc4286bc61ededd8371ced5242b5caf97d86702"
       }
+    },
+    "implement-spec": {
+      "source": "github.com/mattpocock/skills/skills/engineering/implement-spec",
+      "type": "github-subdir",
+      "branch": "v1.3.1",
+      "installed_at": "2026-11-16T15:31:32.567355539+01:00",
+      "repo_url": "https://github.com/mattpocock/skills.git",
+      "subdir": "skills/engineering/implement-spec",
+      "version": "24fe0ef",
+      "tree_hash": "0cfefc751d0cb64f0c948ffcb17e13b94e778f08",
+      "file_hashes": {
+        "SKILL.md": "sha256:7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d",
+        "agents/openai.yaml": "sha256:fd41efb42c60c96320d6531be7e4bf15cbf5518cd652d57dff27ccffa46988e9"
+      }
     }
   }
 }
