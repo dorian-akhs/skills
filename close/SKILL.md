@@ -1,6 +1,6 @@
 ---
 name: close
-description: Merge a reviewed PR after approving its commit message, clean up its branches and worktree, then settle the conversation.
+description: Merge a reviewed PR after approving its commit message, mark its completed tracker task done, clean up its branches and worktree, then settle the conversation.
 disable-model-invocation: true
 ---
 
@@ -19,6 +19,11 @@ Treat conversation claims of a merge as a cue to verify GitHub.
 If the PR is missing or ambiguous, ask for its URL before merging or deleting
 anything. If closed without merging, ask what the user wants to retain or remove.
 Do not create a PR as part of closing.
+
+Resolve the associated tracker task from the session and the PR's explicit issue
+references. Read its live status and relevant comments using repository tracker
+instructions. If references are ambiguous, ask which task to close before changing
+tracker state. A PR without an associated task needs no tracker update.
 
 Completion: one verified PR is associated with the intended local work, and its
 state, merge rules, and exact cleanup targets are known.
@@ -55,6 +60,29 @@ honor the approved strategy or message, resolve that before proceeding.
 
 Completion: GitHub confirms the approved PR is merged, with its merge commit
 recorded. A successful command or an enabled auto-merge is insufficient.
+
+## Complete the tracker task
+
+After GitHub confirms the PR is merged, update its associated completed task
+before cleanup. This also applies when the PR was already merged on entry.
+Invoking `/close` authorizes this status update without another confirmation.
+An open, queued, failed, or unmerged closed PR does not authorize marking the
+task done.
+
+For Multica, use the authenticated CLI and repository workspace instructions.
+Read the task with `multica issue get <id> --output json`. If its status is
+`in_review` or `in_progress`, run
+`multica issue status <id> done --no-start`, then read it again and verify `done`.
+If already `done` (including through merge integration), skip the write. For
+another status, report it and ask how to proceed rather than silently changing it.
+Update only the task completed by this PR; related tasks and parent epics are
+not implicitly completed.
+
+If the tracker is unavailable or the update fails, report the task and failure,
+preserve the workspace for retry, and keep the conversation active. A successful
+merge or status command alone does not prove tracker completion.
+
+Completion: the associated task is verified done, or no task is associated.
 
 ## Clean up a merged PR
 
@@ -108,7 +136,8 @@ operations already completed.
 ## Finish the conversation
 
 Report the PR URL, merge strategy and commit, removed branches/worktree, retained
-artifacts, and anything still pending. Distinguish merged from queued and partial
+artifacts, tracker task and verified status (or no associated task), and anything
+still pending. Distinguish merged from queued and partial
 cleanup from complete cleanup. Release any PR watch when the workflow is finished.
 
 Only after every required operation succeeds, use the host's conversation
