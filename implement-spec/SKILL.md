@@ -42,13 +42,34 @@ Prepare the graph before dispatching ticket workers. The parent owns one loop
 over the entire specification and integrated changes. Use that loop's review,
 repair, and delivery phases in place of steps 7–8, then perform step 9.
 
+## PR target and rebase
+
+Before creating a PR, including the early draft in step 3, and before marking
+it ready for review, identify its exact target repository, remote, and branch
+from the user's instructions and project conventions. Ask if the target remains
+ambiguous. Use that same target explicitly when creating the PR; for an existing
+PR, read its current base.
+
+Pause integration writers and wait for active merges to finish. Preserve any
+uncommitted work, fetch the target branch from its remote, and rebase the
+integration branch onto the fetched tip. Resolve conflicts while preserving all
+integrated ticket work, then rerun applicable checks on the rebased result.
+Verify `git merge-base --is-ancestor <fetched-target-tip> HEAD` succeeds before
+pushing and creating the PR or marking it ready. If the rebase rewrites an
+already-pushed branch, use `--force-with-lease` pinned to its verified remote
+head. Reconcile unexpected remote changes before retrying. Resume workers from
+the updated integration tip.
+
+This gate also applies when feature-loop owns delivery. Report the target and
+fetched commit used for the rebase with the PR delivery result.
+
 ## Steps
 
 1. Use the prepared specification and ticket graph to select the ready frontier.
 
 2. (optional) Use an **exploration subagent** to conduct any exploration required by the tickets - relevant codebase files or external documentation. Ensure the exploration subagent can save files - it should save its markdown notes in a directory outside the repo, accessible by all future subagents. This lets **implementer subagents** focus on implementation rather than exploration.
 
-3. Create the integration branch. If the issue tracker closes work through PRs, or the user asks for one, open a draft PR after the first merge in step 5 (a branch with no commits ahead of main can't open one), marked as closing the spec and tickets.
+3. Create the integration branch. If the issue tracker closes work through PRs, or the user asks for one, open a draft PR after the first merge in step 5 (a branch with no commits ahead of the PR target can't open one), marked as closing the spec and tickets.
 
 4. Use **implementer subagents** to implement each ticket, each in its own worktree on its own branch. Each implementer subagent:
    - confirms its worktree is based on the integration branch before starting, and resets onto it if not;
