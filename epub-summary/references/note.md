@@ -1,6 +1,8 @@
 # Modèle de note
 
-Le modèle et le YAML du vault priment. Pour pro-vault, reprendre Date, Catégorie, Related Day, Auteur, URL et tags du modèle Livres ; conserver les clés existantes, ajouter `Source` avec l'URL connue ou, sans URL, l'URI locale explicite du livre. Ne pas inventer une URL commerciale. Enregistrer aussi `source_sha256`, `extraction_version` et `analysis_status`. Les nouvelles clés générales sont en anglais. Le titre et l'auteur proviennent de l'EPUB, avec les incertitudes signalées.
+Le format et la destination viennent de la conversation et du contexte du harness. Dans un vault, son modèle, ses métadonnées et ses instructions priment. Hors vault, utiliser le format convenu sans imposer de YAML ni de wikilinks. Si la destination ou le format restent ambigus, demander à l'utilisateur avant la rédaction finale.
+
+Conserver le titre, l'auteur, la source et les incertitudes éventuelles. Fournir l'URL connue ou, sans URL, une référence locale explicite au livre ; ne pas inventer une URL commerciale. Garder l'empreinte source, la version d'extraction et le statut d'analyse dans le format approprié, dans la note ou son rapport de couverture, sans imposer de noms de propriétés propres à un vault.
 
 Structure à adapter au genre et au volume :
 
@@ -21,7 +23,7 @@ Résumé, arguments ou événements, exemples et nuances qui changent la compré
 Enseignements transversaux sourcés. Distinguer application personnelle, interprétation et propos de l'auteur.
 
 ## Concepts, nuances et questions
-Concepts reliés par wikilinks, limites et tensions, pistes à approfondir. Pour un roman, motifs, style et ambiguïtés.
+Concepts, limites et tensions, pistes à approfondir. Liens adaptés au format et au contexte. Pour un roman, motifs, style et ambiguïtés.
 
 ## Sources et couverture
 Livre et empreinte ; repères de chapitre, chemin XHTML, ancre ou bloc d'extraction. Chemin du cache et du manifeste. Chapitres/segments traités, exclusions motivées, problèmes d'extraction et contenus visuels non analysés.
