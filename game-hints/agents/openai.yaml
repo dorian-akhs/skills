@@ -1,0 +1,4 @@
+interface:
+  display_name: "Indices de jeu sans spoiler"
+  short_description: "Des indices progressifs, sourcés et sans spoiler"
+  default_prompt: "Utilise $game-hints pour me débloquer dans mon jeu avec un petit indice sourcé, sans me donner la solution."
